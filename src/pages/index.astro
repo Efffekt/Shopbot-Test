@@ -1,5 +1,5 @@
 ---
-
+const timestamp = Date.now();
 ---
 
 <html lang="no">
@@ -12,6 +12,13 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+		<style is:global>
+			shop-bot {
+				display: block;
+				z-index: 2147483647;
+			}
+		</style>
 
 		<style>
 			* {
@@ -160,8 +167,7 @@
 			</footer>
 		</div>
 
-		<script is:inline src="https://shopbot-core-git-main-daniel-tuneteknos-projects.vercel.app/shopbot.js" defer></script>
-
+		<script is:inline src={`https://shopbot-core.vercel.app/shopbot.js?v=${timestamp}`} defer></script>
 		<shop-bot store-id="baatpleiebutikken"></shop-bot>
 	</body>
 </html>
